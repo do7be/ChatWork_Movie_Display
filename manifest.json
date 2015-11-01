@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "ChatWork Movie Display",
+  "version": "0.1",
+  "description": "ChatWork上に貼られた動画URLから動画プレイヤーをチャット上に埋め込みます - Add movie player on ChatWork from movie URL",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chatwork.com/*",
+        "https://kcw.kddi.ne.jp/*"
+      ],
+      "css": ["style.css"],
+      "js": ["loader.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs", "https://*/*"
+  ],
+  "web_accessible_resources":[
+    "addMovie.js"
+  ]
+}
