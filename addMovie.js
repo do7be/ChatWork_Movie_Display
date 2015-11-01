@@ -15,10 +15,17 @@ $(function () {
       .attr("movie-id", movieId)
       .append('To see movie click')
       .on('click', function() {
-        var player = '<iframe width="420" height="315" src="https://www.youtube.com/embed/' + $(this).attr('movie-id') + '" frameborder="0" allowfullscreen></iframe>';
-        $(this).html(player);
+        var $player = $('<iframe />')
+        .width(420)
+        .height(315)
+        .attr('src', 'https://www.youtube.com/embed/' + $(this).attr('movie-id'))
+        .attr('frameborder', 0)
+        .attr('allowfullscreen', "");
+
+        $(this).html($player);
       });
 
       $(this).after($movie);
     });
+  };
 });
