@@ -11,9 +11,10 @@ $(function () {
       var url = urls[3].split("=");
       var movieId = url[1];
 
+      var $text = $('<p>Click to see movie</p>');
       var $movie = $('<div class="movie" />')
       .attr("movie-id", movieId)
-      .append('To see movie click')
+      .append($text)
       .on('click', function() {
         var $player = $('<iframe />')
         .width(420)
@@ -26,6 +27,7 @@ $(function () {
       });
 
       $(this).after($movie);
+      $('a[data-type="youtube"]').remove();
     });
   };
 });
