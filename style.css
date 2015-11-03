@@ -3,6 +3,12 @@ div.movie {
   width: 420px;
   height: 315px;
   border: 1px solid #000;
+  background-color: #F2F2F2;
   text-align: center;
   cursor: pointer;
+}
+
+.movie p {
+  line-height: 315px;
+  font-size: 20px;
 }
